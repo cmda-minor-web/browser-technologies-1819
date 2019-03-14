@@ -10,6 +10,7 @@ The assignment for this week was to test 8 features:
 7. Cookies
 8. LocalStorage
 
+
 #### 1. Turn off images
 When you turn off images in your browser, it still shows SVG images. That's why I decided to make the icons and selfmade png files into SVG files.
 
@@ -21,8 +22,10 @@ During testing it turned out that custom fonts does not work on every browser. T
 #### 3. Turn off color and test colourblindness
 I only used colors for website styling. Such as dividing the sections elements. I also gave a blue outline to the focus elements on which the tab function is located. But because this blue frame does not stand out on every element for example the genre checkboxes, I have given a focus status.
 
+
 #### 4. Mouse/trackpad
 I have added a focus state for the mouse and trackpad. During testing, I discovered that the check boxes could not be focused at all. The reason was because the element was " display hidden". After this issue is resolved, the element could be focused on. The problem that followed was that the focus was not clear to the user. So to fix that problem, I added an `transform scale`. Now when the user is focusing on an element, the element become bigger/smaller.
+
 
 #### 5. Broadband
 To prevent broadband in my concept, I tried to keep everything as small as possible, like:
@@ -31,8 +34,10 @@ To prevent broadband in my concept, I tried to keep everything as small as possi
 • Use SVG instead png
 • Compress images
 
+
 #### 6. Javacsript turn off
 my first concept was all made in javascript, which completely broke the website when Javascript was turned off. That is why this prototype has been completely written to Node JS so that the website can function without javascript.
+
 
 #### 7. Cookies & 8. LocalStorage
 My website currently does not use cookies and local storage
