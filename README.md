@@ -24,7 +24,6 @@ I only used colors for website styling. Such as dividing the sections elements. 
 #### 4. Mouse/trackpad
 I have added a focus state for the mouse and trackpad. During testing, I discovered that the check boxes could not be focused at all. The reason was because the element was " display hidden". After this issue is resolved, the element could be focused on. The problem that followed was that the focus was not clear to the user. So to fix that problem, I added an `transform scale`. Now when the user is focusing on an element, the element become bigger/smaller.
 
-
 #### 5. Broadband
 To prevent broadband in my concept, I tried to keep everything as small as possible, like:
 • Minify Javascript
