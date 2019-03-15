@@ -1,37 +1,44 @@
-# Browser Technologies @cmda-minor-web 1819
-//Robuuste, toegankelijke websites leren bouwen …
+## Features tested and how to fix?
+The assignment for this week was to test 8 features:
 
-In het vak Browser Technologies leer je hoe je goede, robuuste, toegankelijke websites maakt. Je gaat leren over Progressive Enhancement, Feature Detection en Fallback. Het web is er voor iedereen. In dit vak leer je hoe je daarvoor kan zorgen.
-
-Een van de mooiste principes van het web is dat het er echt is voor iedereen. Iedereen met een computer en een browser moet gebruik kunnen maken van het web. Het web is geen gecontroleerde (programmeer) omgeving. Je kan er gerust van uit gaan dat niemand precies hetzelfde te zien krijgt als wat jij ziet in jouw browser. Er zijn natuurlijk de technische beperkingen. Zoals - Afmetingen van de browser - Grootte van het apparaat - Manier van interactie - Kwaliteit van de hardware - Kwaliteit van het netwerk. En er zijn mensen. Allemaal verschillende mensen ...
-
-## Leerdoelen
-- _Wat is Progressive enhancement en hoe kun je dit toepassen._
-- _Hoe doe je Feature Detection en wat doe je als een techniek niet werkt of wordt ondersteund._
-- _Leren een Browser Technologies onderzoeken, testen en implementeren als enhancement._
-
-[Rubric](https://docs.google.com/spreadsheets/d/1X8XBbblGAcoij4zPcbjZ5FHcQMusn1hc0NvNkzP5qx4/edit?usp=sharing)
-
-## Programma
-
-### Week 1
-Het web is voor iedereen. Leren over Progressive enhancement en kennismaken met testen en het device lab.
-- [Les 1 - Progressive enhancement & Briefing Opdracht 1.1](https://docs.google.com/presentation/d/1j2N22palCDin_0jX89DItLj9kQy8YhwwuvcA_XnhjWQ/edit?usp=sharing)
-- [Opdracht 1.1 - Breek het web](Opdracht1.1.md)
-- [Opdracht 1.2 - Fork je OBA](Opdracht1.2.md)
-
-- Weekly Nerd: ICONS met Maike Klip - ontwerpen voor vluchtelingen. Woensdag 13 Maart, 16:00 in de Medialounge van het Theo Thijssenhuis.
-
-### Week 2
-Wat laat je zien als een browser of gebruiker een 'enhancement' niet kan tonen of zien? Hoe doe je Feature Detection en wat doe je als een techniek niet werkt of wordt ondersteund?
-
-- [Opdracht 2 - Progressive Enhanced Browser Technologie](Opdracht2.md)
-
-- Weekly Nerd: A11y met Ischa Gast - Schiphol.
+1. Turn off images
+2. Turn off custom fonts
+3. Turn off color and test colourblindness
+4. Mouse/trackpad
+5. Broadband
+6. Javascript turn off
+7. Cookies
+8. LocalStorage
+ 
+#### 1. Turn off images
+When you turn off images in your browser, it still shows SVG images. That's why I decided to make the icons and selfmade png files into SVG files.
 
 
-### Week 3
-Verder werken aan de opdracht.
+#### 2. Custom fonts
+During testing it turned out that custom fonts does not work on every browser. To prevent this problem, a fallback font was used and a standard font that should be suitable for most browsers.
 
 
-- Weekly Nerd: PE bij de Voorhoede.
+#### 3. Turn off color and test colourblindness
+I only used colors for website styling. Such as dividing the sections elements. I also gave a blue outline to the focus elements on which the tab function is located. But because this blue frame does not stand out on every element for example the genre checkboxes, I have given a focus status.
+
+#### 4. Mouse/trackpad
+I have added a focus state for the mouse and trackpad. During testing, I discovered that the check boxes could not be focused at all. The reason was because the element was " display hidden". After this issue is resolved, the element could be focused on. The problem that followed was that the focus was not clear to the user. So to fix that problem, I added an `transform scale`. Now when the user is focusing on an element, the element become bigger/smaller.
+
+#### 5. Broadband
+To prevent broadband in my concept, I tried to keep everything as small as possible, like:
+• Minify Javascript
+• Minify CSS
+• Use SVG instead png
+• Compress images
+
+#### 6. Javacsript turn off
+my first concept was all made in javascript, which completely broke the website when Javascript was turned off. That is why this prototype has been completely written to Node JS so that the website can function without javascript.
+
+#### 7. Cookies & 8. LocalStorage
+My website currently does not use cookies and local storage
+
+
+## Screenreader testing and device lab
+During testing I was only able to test the screen readers. It showed that I had to add much better alt tags to images.
+
+Unfortunately, I didn't have enough time for testing on different devices. The only thing I know is that my oba website breaks completely on mobile and tablet, since everything is styled for laptop size.
